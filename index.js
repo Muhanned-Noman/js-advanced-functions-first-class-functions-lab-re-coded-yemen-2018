@@ -5,3 +5,15 @@ const returnFirstTwoDrivers = function(array){
 const returnLastTwoDrivers = function(array){
   return array.slice(-2);
 };
+const selectingDrivers = [returnFirstTwoDrivers,returnLastTwoDrivers];
+
+const createFareMultiplier = function (value){
+  return function(newValue){
+    return value * newValue;
+  };
+};
+const fareDoubler = createFareMultiplier(2);
+const fareTripler = createFareMultiplier(3);
+const selectDifferentDrivers = function (array, fun) {
+  return fun(array);
+};
